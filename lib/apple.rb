@@ -1,16 +1,13 @@
+fruits = ["apple","orange","apple"]
 
-def apple_picker_with_select(fruit_list)
-  fruit_list.select do |fruit|
-    fruit == "apple"
-  end
+def apple_picker_with_select(fruits)
+  fruits.select {|fruit| fruit == "apple"}
 end
 
-def apple_picker_with_collect(fruit_list)
-result_of_collecting = []
-fruit_list.collect do |fruit|
-    if fruit == "apple"
-      result_of_collecting << fruit
-    end
-  end
-  result_of_collecting.compact
+
+def apple_picker_with_collect(fruits)
+  result_of_collecting = []
+    result_of_collecting = fruits.collect {|fruit|  "apple" if fruit == "apple"}.compact
+  result_of_collecting
 end
+
